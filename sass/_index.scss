@@ -1,0 +1,277 @@
+/* Home: -------------------------------------------------------------------------------------*/
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 5.5fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "headerHome"
+        "mainHome"
+        "footerHome";
+}
+
+.headerHome {
+    grid-area: headerHome;
+}
+
+.footerHome {
+    grid-area: footerHome;
+}
+
+.mainHome {
+    display: grid;
+    grid-area: mainHome;
+    grid-template-columns: 1.0fr;
+    grid-template-rows: 0.5fr 500px 0.8fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "productosHomeArriba"
+        "carrusel"
+        "productosHomeAbajo";
+    background-image: url(../img/fondo_home.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.mainHome__productosHomeArriba {
+    display: grid;
+    grid-area: productosHomeArriba;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1.2fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "productoHome1 productoHome2";
+    align-items: baseline;
+}
+
+.productosHomeArriba__productoHome1 {
+    grid-area: productoHome1;
+}
+
+.productosHomeArriba__productoHome2 {
+    grid-area: productoHome2;
+}
+
+.productosHomeArriba__productoHome1,
+.productosHomeArriba__productoHome2 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.productosHomeArriba__productoHome1 p,
+.productosHomeArriba__productoHome2 p {
+    width: 80%;
+    text-align: center;
+}
+
+.mainHome__carrusel {
+    grid-area: carrusel;
+    display: flex;
+    justify-content: center;
+    border-top: solid 2px $color1;
+    border-bottom: solid 2px $color1;
+    background-color: $color2;
+    margin-bottom: 100px;
+}
+
+.mainHome__carrusel img {
+    width: 400px;
+    height: 400px;
+}
+
+.mainHome .carousel-item,
+.mainHome .carousel-item.active {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+
+.mainHome .carousel-item img {
+    border-left: solid 2px $color1;
+    border-right: solid 2px $color1;
+    height: 400px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(https://icongr.am/octicons/chevron-left.svg?size=70&color=362222);
+}
+
+.carousel-control-next-icon {
+    background-image: url(https://icongr.am/octicons/chevron-right.svg?size=70&color=362222);
+}
+
+.mainSeccionProductos .carousel-control-next, 
+.mainSeccionProductos .carousel-control-prev {
+    bottom: 100px;
+}
+
+.mainHome__productosHomeAbajo {
+    display: grid;
+    grid-area: productosHomeAbajo;
+    grid-template-columns: 1.0fr;
+    grid-template-rows: 0.3fr 0.3fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "productoHome3"
+        "productoHome4";
+}
+
+.productosHomeAbajo__productoHome3 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "productoHome3__foto productoHome3__titulo"
+        "productoHome3__foto productoHome3__descripcion";
+    grid-area: productoHome3;
+    justify-items: center;
+    margin-bottom: 80px;
+}
+
+.productoHome3__foto {
+    grid-area: productoHome3__foto;
+    padding-right: 20px;
+}
+
+.productoHome3__titulo {
+    grid-area: productoHome3__titulo;
+    justify-self: start;
+}
+
+.productoHome3__descripcion {
+    grid-area: productoHome3__descripcion;
+    width: 80%;
+    justify-self: start;
+    text-align: left;
+}
+
+.productosHomeAbajo__productoHome4 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.2fr 1.8fr;
+    gap: 5px 5px;
+    grid-template-areas:
+        "productoHome4__titulo productoHome4__foto"
+        "productoHome4__descripcion productoHome4__foto";
+    grid-area: productoHome4;
+    justify-items: center;
+}
+
+.productoHome4__foto {
+    grid-area: productoHome4__foto;
+    padding-left: 20px;
+}
+
+.productoHome4__titulo {
+    grid-area: productoHome4__titulo;
+    justify-self: end;
+}
+
+.productoHome4__descripcion {
+    grid-area: productoHome4__descripcion;
+    width: 80%;
+    justify-self: end;
+    text-align: right;
+}
+
+.mainHome article a img {
+    width: 400px;
+    height: 400px;
+    opacity: 0.96;
+    box-shadow: 0 0 5px $color1;
+    border-radius: 5px;
+}
+
+.mainHome article a img:hover {
+    opacity: 1.0;
+}
+
+.mainHome article h3 {
+    font-size: 2em;
+}
+
+.mainHome article a img {
+    transition: transform 0.3s;
+}
+
+.mainHome article a img:hover {
+    transform: scale(1.01);
+}
+
+@media screen and (max-width: 1024px) {
+    .mainHome__productosHomeArriba {
+        grid-template-columns: 1.0fr;
+        grid-template-rows: 1.0fr;
+        grid-template-areas:
+            "productoHome1"
+            "productoHome2";
+        padding-top: 20px;
+    }
+
+    .productosHomeAbajo__productoHome3,
+    .productosHomeAbajo__productoHome4 {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .productosHomeAbajo__productoHome4 {
+        margin-bottom: 120px;
+    }
+
+    .productoHome3__foto {
+        padding-right: 0;
+    }
+
+    .productoHome3__titulo {
+        justify-self: center;
+    }
+
+    .productoHome3__descripcion {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .productoHome4__foto {
+        padding-left: 0;
+    }
+
+    .productoHome4__titulo {
+        justify-self: center;
+    }
+
+    .productoHome4__descripcion {
+        justify-self: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .mainHome article a img,
+    .mainHome__carrusel .carousel-item img {
+        width: 310px;
+        height: 310px;
+    }
+    
+    .mainHome {
+        grid-template-rows: 0.5fr 400px 0.8fr;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .mainHome__productosHomeAbajo {
+        margin-bottom: 120px;
+    }
+}
