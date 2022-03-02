@@ -1,21 +1,18 @@
 @charset "UTF-8";
 /* Paleta de colores: https://colorhunt.co/palette/362222b3541effccd2ffeded */
-/* Reseteo: ------------------------------------------------------------------------------------*/
+/* Reseteo, body y sus partes principales: ---------------------------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Body y sus partes principales - general: ----------------------------------------------------*/
-body {
+* body {
   font-family: "Dosis", sans-serif;
   color: #362222;
   text-shadow: 0 0 30px #b3541e;
   height: 100vh;
 }
-
-header {
+* body header {
   background-color: #ffccd2;
   background-image: linear-gradient(to left, #ffccd2, #ffeded);
   display: flex;
@@ -25,19 +22,17 @@ header {
   align-items: baseline;
   text-align: center;
 }
-header a:not(a.dropdown-toggle) {
+* body header a:not(a.dropdown-toggle) {
   color: #362222;
   transition: text-shadow 0.3s;
 }
-header a:hover:not(a.dropdown-toggle) {
+* body header a:hover:not(a.dropdown-toggle) {
   text-shadow: 0 0 10px #b3541e;
 }
-
-main {
+* body main {
   background-color: #ffeded;
 }
-
-footer {
+* body footer {
   background-color: #ffccd2;
   background-image: linear-gradient(to left, #ffccd2, #ffeded);
   display: flex;
@@ -48,15 +43,15 @@ footer {
   padding-bottom: 10px;
   padding-top: 5px;
 }
-footer a:hover {
+* body footer a:hover {
   color: #362222;
   transition: text-shadow 0.3s;
   text-shadow: 0 0 10px #b3541e;
 }
-footer section {
+* body footer section {
   margin-top: 5px;
 }
-footer ul ul {
+* body footer ul ul {
   background-color: #ffccd2;
   border: solid 1px #ffeded;
 }
@@ -102,7 +97,8 @@ footer ul ul {
     background-color: #ffccd2;
   }
 
-  .dropdown-item.active, .dropdown-item:active {
+  .dropdown-item.active,
+.dropdown-item:active {
     color: #362222;
     text-decoration: none;
     background-color: #ffccd2;
@@ -125,7 +121,7 @@ footer ul ul {
     display: none;
   }
 }
-/* Barra de navegación desktop y logo: ----------------------------------------------------------------*/
+/* Barra de navegación desktop y logo: -------------------------------------------*/
 li {
   display: inline-block;
   width: 110px;
@@ -171,7 +167,7 @@ header h1:hover {
   transform: skewX(10deg);
 }
 
-/* Imports: ----------------------------------------------------------------------------------*/
+/* Imports: -------------------------------------------------------------------*/
 /* Home: -------------------------------------------------------------------------------------*/
 .home {
   display: grid;
@@ -180,16 +176,10 @@ header h1:hover {
   gap: 0px 0px;
   grid-template-areas: "headerHome" "mainHome" "footerHome";
 }
-
-.headerHome {
+.home .headerHome {
   grid-area: headerHome;
 }
-
-.footerHome {
-  grid-area: footerHome;
-}
-
-.mainHome {
+.home .mainHome {
   display: grid;
   grid-area: mainHome;
   grid-template-columns: 1fr;
@@ -200,8 +190,7 @@ header h1:hover {
   background-size: cover;
   background-position: center;
 }
-
-.mainHome__productosHomeArriba {
+.home .mainHome .mainHome__productosHomeArriba {
   display: grid;
   grid-area: productosHomeArriba;
   grid-template-columns: 0.5fr 0.5fr;
@@ -210,17 +199,14 @@ header h1:hover {
   grid-template-areas: "productoHome1 productoHome2";
   align-items: baseline;
 }
-
-.productosHomeArriba__productoHome1 {
+.home .mainHome .mainHome__productosHomeArriba .productosHomeArriba__productoHome1 {
   grid-area: productoHome1;
 }
-
-.productosHomeArriba__productoHome2 {
+.home .mainHome .mainHome__productosHomeArriba .productosHomeArriba__productoHome2 {
   grid-area: productoHome2;
 }
-
-.productosHomeArriba__productoHome1,
-.productosHomeArriba__productoHome2 {
+.home .mainHome .mainHome__productosHomeArriba .productosHomeArriba__productoHome1,
+.home .mainHome .mainHome__productosHomeArriba .productosHomeArriba__productoHome2 {
   margin-top: 80px;
   margin-bottom: 80px;
   display: flex;
@@ -229,14 +215,12 @@ header h1:hover {
   justify-content: space-around;
   align-items: center;
 }
-
-.productosHomeArriba__productoHome1 p,
-.productosHomeArriba__productoHome2 p {
+.home .mainHome .mainHome__productosHomeArriba .productosHomeArriba__productoHome1 p,
+.home .mainHome .mainHome__productosHomeArriba .productosHomeArriba__productoHome2 p {
   width: 80%;
   text-align: center;
 }
-
-.mainHome__carrusel {
+.home .mainHome .mainHome__carrusel {
   grid-area: carrusel;
   display: flex;
   justify-content: center;
@@ -245,39 +229,32 @@ header h1:hover {
   background-color: #ffccd2;
   margin-bottom: 100px;
 }
-
-.mainHome__carrusel img {
+.home .mainHome .mainHome__carrusel img {
   width: 400px;
   height: 400px;
 }
-
-.mainHome .carousel-item,
-.mainHome .carousel-item.active {
+.home .mainHome .mainHome__carrusel .carousel-item {
   display: flex;
   justify-content: center;
   height: 400px;
 }
-
-.mainHome .carousel-item img {
+.home .mainHome .mainHome__carrusel .carousel-item.active {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+.home .mainHome .mainHome__carrusel .carousel-item img {
   border-left: solid 2px #b3541e;
   border-right: solid 2px #b3541e;
   height: 400px;
 }
-
-.carousel-control-prev-icon {
+.home .mainHome .mainHome__carrusel .carousel-control-prev-icon {
   background-image: url(https://icongr.am/octicons/chevron-left.svg?size=70&color=362222);
 }
-
-.carousel-control-next-icon {
+.home .mainHome .mainHome__carrusel .carousel-control-next-icon {
   background-image: url(https://icongr.am/octicons/chevron-right.svg?size=70&color=362222);
 }
-
-.mainSeccionProductos .carousel-control-next,
-.mainSeccionProductos .carousel-control-prev {
-  bottom: 100px;
-}
-
-.mainHome__productosHomeAbajo {
+.home .mainHome .mainHome__productosHomeAbajo {
   display: grid;
   grid-area: productosHomeAbajo;
   grid-template-columns: 1fr;
@@ -285,8 +262,7 @@ header h1:hover {
   gap: 5px 5px;
   grid-template-areas: "productoHome3" "productoHome4";
 }
-
-.productosHomeAbajo__productoHome3 {
+.home .mainHome .mainHome__productosHomeAbajo .productosHomeAbajo__productoHome3 {
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
   grid-template-rows: 0.2fr 1.8fr;
@@ -296,25 +272,21 @@ header h1:hover {
   justify-items: center;
   margin-bottom: 80px;
 }
-
-.productoHome3__foto {
+.home .mainHome .mainHome__productosHomeAbajo .productosHomeAbajo__productoHome3 .productoHome3__foto {
   grid-area: productoHome3__foto;
   padding-right: 20px;
 }
-
-.productoHome3__titulo {
+.home .mainHome .mainHome__productosHomeAbajo .productosHomeAbajo__productoHome3 .productoHome3__titulo {
   grid-area: productoHome3__titulo;
   justify-self: start;
 }
-
-.productoHome3__descripcion {
+.home .mainHome .mainHome__productosHomeAbajo .productosHomeAbajo__productoHome3 .productoHome3__descripcion {
   grid-area: productoHome3__descripcion;
   width: 80%;
   justify-self: start;
   text-align: left;
 }
-
-.productosHomeAbajo__productoHome4 {
+.home .mainHome .mainHome__productosHomeAbajo .productosHomeAbajo__productoHome4 {
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
   grid-template-rows: 0.2fr 1.8fr;
@@ -323,46 +295,42 @@ header h1:hover {
   grid-area: productoHome4;
   justify-items: center;
 }
-
-.productoHome4__foto {
+.home .mainHome .mainHome__productosHomeAbajo .productosHomeAbajo__productoHome4 .productoHome4__foto {
   grid-area: productoHome4__foto;
   padding-left: 20px;
 }
-
-.productoHome4__titulo {
+.home .mainHome .mainHome__productosHomeAbajo .productosHomeAbajo__productoHome4 .productoHome4__titulo {
   grid-area: productoHome4__titulo;
   justify-self: end;
 }
-
-.productoHome4__descripcion {
+.home .mainHome .mainHome__productosHomeAbajo .productosHomeAbajo__productoHome4 .productoHome4__descripcion {
   grid-area: productoHome4__descripcion;
   width: 80%;
   justify-self: end;
   text-align: right;
 }
-
-.mainHome article a img {
+.home .mainHome article a img {
   width: 400px;
   height: 400px;
   opacity: 0.96;
   box-shadow: 0 0 5px #b3541e;
   border-radius: 5px;
-}
-
-.mainHome article a img:hover {
-  opacity: 1;
-}
-
-.mainHome article h3 {
-  font-size: 2em;
-}
-
-.mainHome article a img {
   transition: transform 0.3s;
 }
-
-.mainHome article a img:hover {
+.home .mainHome article a img:hover {
+  opacity: 1;
   transform: scale(1.01);
+}
+.home .mainHome article h3 {
+  font-size: 2em;
+}
+.home .footerHome {
+  grid-area: footerHome;
+}
+
+.mainSeccionProductos .carousel-control-next,
+.mainSeccionProductos .carousel-control-prev {
+  bottom: 100px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -438,8 +406,10 @@ header h1:hover {
   gap: 0px 0px;
   grid-template-areas: "headerInfo" "mainInfo" "footerInfo";
 }
-
-.mainInfo {
+.info .headerInfo {
+  grid-area: headerInfo;
+}
+.info .mainInfo {
   grid-area: mainInfo;
   display: flex;
   flex-wrap: wrap;
@@ -450,24 +420,17 @@ header h1:hover {
   background-size: cover;
   background-position: center;
 }
-
-.footerInfo {
-  grid-area: footerInfo;
-}
-
-.headerInfo {
-  grid-area: headerInfo;
-}
-
-.mainInfo img {
+.info .mainInfo img {
   height: 400px;
   width: 400px;
 }
-
-.mainInfo p {
+.info .mainInfo p {
   margin-top: 20px;
   text-align: center;
   width: 95%;
+}
+.info .footerInfo {
+  grid-area: footerInfo;
 }
 
 @media screen and (max-width: 425px) {
@@ -484,24 +447,17 @@ header h1:hover {
   gap: 0px 0px;
   grid-template-areas: "headerContacto" "mainContacto" "footerContacto";
 }
-
-.mainContacto {
+.contacto .headerContacto {
+  grid-area: headerContacto;
+}
+.contacto .mainContacto {
   grid-area: mainContacto;
   background-image: url(../img/cookies.png);
   background-position: left;
   font-weight: bolder;
   text-shadow: none;
 }
-
-.footerContacto {
-  grid-area: footerContacto;
-}
-
-.headerContacto {
-  grid-area: headerContacto;
-}
-
-.formulario {
+.contacto .mainContacto .formulario {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -510,23 +466,23 @@ header h1:hover {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=checkbox],
-textarea {
+.contacto .mainContacto .formulario label {
+  display: block;
+}
+.contacto .mainContacto input[type=text],
+.contacto .mainContacto input[type=number],
+.contacto .mainContacto input[type=email],
+.contacto .mainContacto input[type=checkbox],
+.contacto .mainContacto textarea {
   border: 2px solid #362222;
   border-radius: 4px;
 }
-
-.formulario__checkbox {
+.contacto .mainContacto .formulario__checkbox {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 }
-
-.button {
+.contacto .mainContacto .button {
   background-color: #ffccd2;
   border: none;
   font-family: "Dosis", sans-serif;
@@ -538,13 +494,11 @@ textarea {
   font-size: 1em;
   box-shadow: 2px 2px 5px #b3541e;
 }
-
-.button:hover {
+.contacto .mainContacto .button:hover {
   font-weight: bold;
 }
-
-.formulario label {
-  display: block;
+.contacto .footerContacto {
+  grid-area: footerContacto;
 }
 
 @media screen and (max-width: 395px) {
@@ -559,6 +513,19 @@ textarea {
   }
 }
 /* Secciones de Productos: -------------------------------------------------------------------*/
+.mainSeccionProductos .carousel-control-next,
+.mainSeccionProductos .carousel-control-prev {
+  bottom: 100px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url(https://icongr.am/octicons/chevron-left.svg?size=70&color=362222);
+}
+
+.carousel-control-next-icon {
+  background-image: url(https://icongr.am/octicons/chevron-right.svg?size=70&color=362222);
+}
+
 .seccionProductos {
   display: grid;
   grid-template-columns: 1fr;
@@ -566,69 +533,35 @@ textarea {
   gap: 0px 0px;
   grid-template-areas: "headerSeccionProductos" "mainSeccionProductos" "footerSeccionProductos";
 }
-
-.headerSeccionProductos {
+.seccionProductos .headerSeccionProductos {
   grid-area: headerSeccionProductos;
 }
-
-.mainSeccionProductos {
+.seccionProductos .mainSeccionProductos {
   grid-area: mainSeccionProductos;
   background-image: url(../img/fondo_seccionProductos.svg);
   background-size: cover;
   background-position: center;
 }
-
-.footerSeccionProductos {
-  grid-area: footerSeccionProductos;
-}
-
-.mainSeccionProductos h2,
-.mainSeccionProductos h4,
-.mainSeccionProductos p {
+.seccionProductos .mainSeccionProductos p {
   text-align: center;
 }
-
-.mainSeccionProductos h2 {
+.seccionProductos .mainSeccionProductos > p {
+  margin-bottom: 50px;
+}
+.seccionProductos .mainSeccionProductos h2 {
+  text-align: center;
   padding-top: 70px;
   font-size: 2em;
 }
-
-.mainSeccionProductos h4 {
+.seccionProductos .mainSeccionProductos h4 {
+  text-align: center;
   font-size: 1.2em;
   margin: 10px 10px;
 }
-
-.mainSeccionProductos > p {
-  margin-bottom: 50px;
-}
-
-.fotoProducto,
-.fotoPorcionIndividual,
-.fotoMesaDulce {
-  width: 300px;
-  height: 300px;
-  opacity: 0.96;
-  box-shadow: 0 0 5px #b3541e;
-  border-radius: 5px;
-  display: block;
-  object-fit: cover;
-}
-
-.fotoMesaDulce {
-  width: 800px;
-  height: 500px;
-}
-
-.fotoProducto:hover,
-.fotoPorcionIndividual:hover,
-.fotoMesaDulce:hover {
-  opacity: 1;
-}
-
-.catalogoPostres,
-.catalogoSaladitos,
-.catalogoTortasPersonalizadas,
-.catalogoMesasDulces {
+.seccionProductos .mainSeccionProductos .catalogoPostres,
+.seccionProductos .mainSeccionProductos .catalogoSaladitos,
+.seccionProductos .mainSeccionProductos .catalogoTortasPersonalizadas,
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -638,41 +571,70 @@ textarea {
   padding-left: 20px;
   padding-right: 20px;
 }
-
-.catalogoMesasDulces {
+.seccionProductos .mainSeccionProductos .catalogoPostres .fotoProducto,
+.seccionProductos .mainSeccionProductos .catalogoPostres .fotoPorcionIndividual,
+.seccionProductos .mainSeccionProductos .catalogoPostres .fotoMesaDulce,
+.seccionProductos .mainSeccionProductos .catalogoSaladitos .fotoProducto,
+.seccionProductos .mainSeccionProductos .catalogoSaladitos .fotoPorcionIndividual,
+.seccionProductos .mainSeccionProductos .catalogoSaladitos .fotoMesaDulce,
+.seccionProductos .mainSeccionProductos .catalogoTortasPersonalizadas .fotoProducto,
+.seccionProductos .mainSeccionProductos .catalogoTortasPersonalizadas .fotoPorcionIndividual,
+.seccionProductos .mainSeccionProductos .catalogoTortasPersonalizadas .fotoMesaDulce,
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .fotoProducto,
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .fotoPorcionIndividual,
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .fotoMesaDulce {
+  width: 300px;
+  height: 300px;
+  opacity: 0.96;
+  box-shadow: 0 0 5px #b3541e;
+  border-radius: 5px;
+  display: block;
+  object-fit: cover;
+}
+.seccionProductos .mainSeccionProductos .catalogoPostres .fotoProducto:hover,
+.seccionProductos .mainSeccionProductos .catalogoPostres .fotoPorcionIndividual:hover,
+.seccionProductos .mainSeccionProductos .catalogoPostres .fotoMesaDulce:hover,
+.seccionProductos .mainSeccionProductos .catalogoSaladitos .fotoProducto:hover,
+.seccionProductos .mainSeccionProductos .catalogoSaladitos .fotoPorcionIndividual:hover,
+.seccionProductos .mainSeccionProductos .catalogoSaladitos .fotoMesaDulce:hover,
+.seccionProductos .mainSeccionProductos .catalogoTortasPersonalizadas .fotoProducto:hover,
+.seccionProductos .mainSeccionProductos .catalogoTortasPersonalizadas .fotoPorcionIndividual:hover,
+.seccionProductos .mainSeccionProductos .catalogoTortasPersonalizadas .fotoMesaDulce:hover,
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .fotoProducto:hover,
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .fotoPorcionIndividual:hover,
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .fotoMesaDulce:hover {
+  opacity: 1;
+}
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces {
   justify-content: center;
 }
-
-.catalogoSaladitos,
-.catalogoMesasDulces,
-.catalogoTortasPersonalizadas {
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .fotoMesaDulce {
+  width: 800px;
+  height: 500px;
+}
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .carousel-item.active {
+  display: flex;
+  justify-content: center;
+}
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces .carousel-indicators [data-bs-target] {
+  background-color: #362222;
+}
+.seccionProductos .mainSeccionProductos .catalogoSaladitos,
+.seccionProductos .mainSeccionProductos .catalogoMesasDulces,
+.seccionProductos .mainSeccionProductos .catalogoTortasPersonalizadas {
   padding-bottom: 100px;
 }
-
-.catalogoPostres article .fotoPorcionIndividual {
+.seccionProductos .mainSeccionProductos .catalogoPostres article .fotoPorcionIndividual {
   display: none;
 }
-
-.catalogoPostres article:hover .fotoPorcionIndividual {
+.seccionProductos .mainSeccionProductos .catalogoPostres article:hover .fotoPorcionIndividual {
   display: block;
 }
-
-.catalogoPostres article:hover .fotoProducto {
+.seccionProductos .mainSeccionProductos .catalogoPostres article:hover .fotoProducto {
   display: none;
 }
-
-.catalogoMesasDulces .carousel-item.active {
-  display: flex;
-  justify-content: center;
-}
-
-.catalogoMesasDulces .carousel-item.active {
-  display: flex;
-  justify-content: center;
-}
-
-.carousel-indicators [data-bs-target] {
-  background-color: #362222;
+.seccionProductos .footerSeccionProductos {
+  grid-area: footerSeccionProductos;
 }
 
 @media screen and (max-width: 840px) {

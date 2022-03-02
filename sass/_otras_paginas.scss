@@ -9,37 +9,37 @@
         "headerInfo"
         "mainInfo"
         "footerInfo";
-}
 
-.mainInfo {
-    grid-area: mainInfo;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 50px;
-    padding-bottom: 60px;
-    background-image: url(../img/fondo_info.svg);
-    background-size: cover;
-    background-position: center;
-}
+    .headerInfo {
+        grid-area: headerInfo;
+    }
 
-.footerInfo {
-    grid-area: footerInfo;
-}
+    .mainInfo {
+        grid-area: mainInfo;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 50px;
+        padding-bottom: 60px;
+        background-image: url(../img/fondo_info.svg);
+        background-size: cover;
+        background-position: center;
 
-.headerInfo {
-    grid-area: headerInfo;
-}
+        img {
+            height: 400px;
+            width: 400px;
+        }
 
-.mainInfo img {
-    height: 400px;
-    width: 400px;
-}
+        p {
+            margin-top: 20px;
+            text-align: center;
+            width: 95%;
+        }
+    }
 
-.mainInfo p {
-    margin-top: 20px;
-    text-align: center;
-    width: 95%;
+    .footerInfo {
+        grid-area: footerInfo;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -60,75 +60,77 @@
         "headerContacto"
         "mainContacto"
         "footerContacto";
-}
 
-.mainContacto {
-    grid-area: mainContacto;
-    background-image: url(../img/cookies.png);
-    background-position: left;
-    font-weight: bolder;
-    text-shadow: none;
-}
+    .headerContacto {
+        grid-area: headerContacto;
+    }
 
-.footerContacto {
-    grid-area: footerContacto;
-}
+    .mainContacto {
+        grid-area: mainContacto;
+        background-image: url(../img/cookies.png);
+        background-position: left;
+        font-weight: bolder;
+        text-shadow: none;
 
-.headerContacto {
-    grid-area: headerContacto;
-}
+        .formulario {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            border: 2px solid $color2;
+            padding: 50px;
+            margin-top: 30px;
+            margin-bottom: 30px;
 
-.formulario {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    border: 2px solid $color2;
-    padding: 50px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+            label {
+                display: block;
+            }
+        }
 
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=checkbox],
-textarea {
-    border: 2px solid $color0;
-    border-radius: 4px;
-}
+        input[type=text],
+        input[type=number],
+        input[type=email],
+        input[type=checkbox],
+        textarea {
+            border: 2px solid $color0;
+            border-radius: 4px;
+        }
 
-.formulario__checkbox {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
+        .formulario__checkbox {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
 
-.button {
-    background-color: $color2;
-    border: none;
-    font-family: 'Dosis', sans-serif;
-    color: $color0;
-    text-shadow: 1px 1px 30px $color1;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1em;
-    box-shadow: 2px 2px 5px $color1;
-}
+        .button {
+            background-color: $color2;
+            border: none;
+            font-family: 'Dosis', sans-serif;
+            color: $color0;
+            text-shadow: 1px 1px 30px $color1;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1em;
+            box-shadow: 2px 2px 5px $color1;
 
-.button:hover {
-    font-weight: bold;
-}
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
 
-.formulario label {
-    display: block;
+    .footerContacto {
+        grid-area: footerContacto;
+    }
 }
 
 @media screen and (max-width: 395px) {
-    .formulario label {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+    .formulario {
+        label {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
     }
 
     .button {
@@ -137,6 +139,19 @@ textarea {
 }
 
 /* Secciones de Productos: -------------------------------------------------------------------*/
+
+.mainSeccionProductos .carousel-control-next,
+.mainSeccionProductos .carousel-control-prev {
+    bottom: 100px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(https://icongr.am/octicons/chevron-left.svg?size=70&color=362222);
+}
+
+.carousel-control-next-icon {
+    background-image: url(https://icongr.am/octicons/chevron-right.svg?size=70&color=362222);
+}
 
 .seccionProductos {
     display: grid;
@@ -147,114 +162,114 @@ textarea {
         "headerSeccionProductos"
         "mainSeccionProductos"
         "footerSeccionProductos";
-}
 
-.headerSeccionProductos {
-    grid-area: headerSeccionProductos;
-}
+    .headerSeccionProductos {
+        grid-area: headerSeccionProductos;
+    }
 
-.mainSeccionProductos {
-    grid-area: mainSeccionProductos;
-    background-image: url(../img/fondo_seccionProductos.svg);
-    background-size: cover;
-    background-position: center;
-}
+    .mainSeccionProductos {
+        grid-area: mainSeccionProductos;
+        background-image: url(../img/fondo_seccionProductos.svg);
+        background-size: cover;
+        background-position: center;
 
-.footerSeccionProductos {
-    grid-area: footerSeccionProductos;
-}
+        p {
+            text-align: center;
+        }
 
-.mainSeccionProductos h2,
-.mainSeccionProductos h4,
-.mainSeccionProductos p {
-    text-align: center;
-}
+        >p {
+            margin-bottom: 50px;
+        }
 
-.mainSeccionProductos h2 {
-    padding-top: 70px;
-    font-size: 2em;
-}
+        h2 {
+            text-align: center;
+            padding-top: 70px;
+            font-size: 2em;
+        }
 
-.mainSeccionProductos h4 {
-    font-size: 1.2em;
-    margin: 10px 10px;
-}
+        h4 {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px 10px;
+        }
 
-.mainSeccionProductos>p {
-    margin-bottom: 50px;
-}
+        .catalogoPostres,
+        .catalogoSaladitos,
+        .catalogoTortasPersonalizadas,
+        .catalogoMesasDulces {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 20px;
+            row-gap: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
 
-.fotoProducto,
-.fotoPorcionIndividual,
-.fotoMesaDulce {
-    width: 300px;
-    height: 300px;
-    opacity: 0.96;
-    box-shadow: 0 0 5px $color1;
-    border-radius: 5px;
-    display: block;
-    object-fit: cover;
-}
+            .fotoProducto,
+            .fotoPorcionIndividual,
+            .fotoMesaDulce {
+                width: 300px;
+                height: 300px;
+                opacity: 0.96;
+                box-shadow: 0 0 5px $color1;
+                border-radius: 5px;
+                display: block;
+                object-fit: cover;
+    
+                &:hover {
+                    opacity: 1.0;
+                }
+            }
+        }
 
-.fotoMesaDulce {
-    width: 800px;
-    height: 500px;
-}
+        .catalogoMesasDulces {
+            justify-content: center;
 
-.fotoProducto:hover,
-.fotoPorcionIndividual:hover,
-.fotoMesaDulce:hover {
-    opacity: 1.0;
-}
+            .fotoMesaDulce {
+                width: 800px;
+                height: 500px;
+            }
 
-.catalogoPostres,
-.catalogoSaladitos,
-.catalogoTortasPersonalizadas,
-.catalogoMesasDulces {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 20px;
-    row-gap: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
+            .carousel-item.active {
+                display: flex;
+                justify-content: center;
+            }
 
-.catalogoMesasDulces {
-    justify-content: center;
-}
+            .carousel-indicators [data-bs-target] {
+                background-color: $color0;
+            }
+        }
 
-.catalogoSaladitos,
-.catalogoMesasDulces,
-.catalogoTortasPersonalizadas {
-    padding-bottom: 100px;
-}
+        .catalogoSaladitos,
+        .catalogoMesasDulces,
+        .catalogoTortasPersonalizadas {
+            padding-bottom: 100px;
+        }
 
-.catalogoPostres article .fotoPorcionIndividual {
-    display: none;
-}
+        .catalogoPostres {
+            article {
+                .fotoPorcionIndividual {
+                    display: none;
+                }
 
-.catalogoPostres article:hover .fotoPorcionIndividual {
-    display: block;
-}
+                &:hover {
+                    .fotoPorcionIndividual {
+                        display: block;
+                    }
 
-.catalogoPostres article:hover .fotoProducto {
-    display: none;
-}
+                    .fotoProducto {
+                        display: none;
+                    }
 
-.catalogoMesasDulces .carousel-item.active {
-    display: flex;
-    justify-content: center;
-}
+                }
+            }
+        }
+    }
 
-.catalogoMesasDulces .carousel-item.active {
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-indicators [data-bs-target] {
-    background-color: $color0;
+    .footerSeccionProductos {
+        grid-area: footerSeccionProductos;
+    }
 }
 
 @media screen and (max-width: 840px) {

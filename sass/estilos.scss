@@ -5,79 +5,81 @@ $color1: rgb(179, 84, 30);
 $color2: rgb(255, 204, 210);
 $color3: rgb(255, 237, 237);
 
-/* Reseteo: ------------------------------------------------------------------------------------*/
+/* Reseteo, body y sus partes principales: ---------------------------------*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
 
-/* Body y sus partes principales - general: ----------------------------------------------------*/
- 
-body {
-    font-family: 'Dosis', sans-serif;
-    color: $color0;
-    text-shadow: 0 0 30px $color1;
-    height: 100vh;
-}
+    body {
+        font-family: 'Dosis', sans-serif;
+        color: $color0;
+        text-shadow: 0 0 30px $color1;
+        height: 100vh;
 
-header {
-    background-color: $color2;
-    background-image: linear-gradient(to left, $color2, $color3);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: baseline;
-    text-align: center;
-
-    a {
-        &:not(a.dropdown-toggle) {
-            color: $color0;
-            transition: text-shadow 0.3s;
-        }
-
-        &:hover:not(a.dropdown-toggle) {
-            text-shadow: 0 0 10px $color1;
-        }
-    }
-}
-
-main {
-    background-color: $color3;
-}
-
-footer {
-    background-color: $color2;
-    background-image: linear-gradient(to left, $color2, $color3);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 5px;
-
-    a {
-
-        &:hover {
-            color: $color0;
-            transition: text-shadow 0.3s;
-            text-shadow: 0 0 10px $color1;
-        }
-
-    }
-
-    section {
-        margin-top: 5px;
-    }
-
-    ul {
-        ul {
+        header {
             background-color: $color2;
-            border: solid 1px $color3;
+            background-image: linear-gradient(to left, $color2, $color3);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: baseline;
+            text-align: center;
+
+            a {
+                &:not(a.dropdown-toggle) {
+                    color: $color0;
+                    transition: text-shadow 0.3s;
+                }
+
+                &:hover {
+                    &:not(a.dropdown-toggle) {
+                        text-shadow: 0 0 10px $color1;
+                    }
+                }
+            }
         }
+
+        main {
+            background-color: $color3;
+        }
+
+        footer {
+            background-color: $color2;
+            background-image: linear-gradient(to left, $color2, $color3);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 5px;
+
+            a {
+
+                &:hover {
+                    color: $color0;
+                    transition: text-shadow 0.3s;
+                    text-shadow: 0 0 10px $color1;
+                }
+
+            }
+
+            section {
+                margin-top: 5px;
+            }
+
+            ul {
+                ul {
+                    background-color: $color2;
+                    border: solid 1px $color3;
+                }
+            }
+        }
+
+
     }
 }
 
@@ -131,7 +133,8 @@ footer {
         background-color: $color2;
     }
 
-    .dropdown-item.active, .dropdown-item:active {
+    .dropdown-item.active,
+    .dropdown-item:active {
         color: $color0;
         text-decoration: none;
         background-color: $color2;
@@ -158,7 +161,7 @@ footer {
     }
 }
 
-/* Barra de navegación desktop y logo: ----------------------------------------------------------------*/
+/* Barra de navegación desktop y logo: -------------------------------------------*/
 
 li {
     display: inline-block;
@@ -198,7 +201,7 @@ ul {
 }
 
 li {
-    > a {
+    >a {
         text-decoration: none;
         color: $color0;
     }
@@ -219,7 +222,7 @@ header {
     }
 }
 
-/* Imports: ----------------------------------------------------------------------------------*/
+/* Imports: -------------------------------------------------------------------*/
 
 @import "index";
 @import "otras_paginas";
