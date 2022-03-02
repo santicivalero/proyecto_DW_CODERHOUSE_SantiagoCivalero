@@ -218,7 +218,29 @@
         padding-top: 20px;
     }
 
-    .productosHomeAbajo__productoHome3,
+    .productosHomeAbajo__productoHome3 {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+        .productoHome3__foto {
+            padding-right: 0;
+        }
+
+        .productoHome3__titulo {
+            justify-self: center;
+        }
+
+        .productoHome3__descripcion {
+            justify-self: center;
+            text-align: center;
+        }
+    }
+
     .productosHomeAbajo__productoHome4 {
         margin-top: 50px;
         margin-bottom: 100px;
@@ -227,49 +249,44 @@
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
-    }
-
-    .productosHomeAbajo__productoHome4 {
         margin-bottom: 120px;
-    }
 
-    .productoHome3__foto {
-        padding-right: 0;
-    }
+        .productoHome4__foto {
+            padding-left: 0;
+        }
 
-    .productoHome3__titulo {
-        justify-self: center;
-    }
+        .productoHome4__titulo {
+            justify-self: center;
+        }
 
-    .productoHome3__descripcion {
-        justify-self: center;
-        text-align: center;
-    }
-
-    .productoHome4__foto {
-        padding-left: 0;
-    }
-
-    .productoHome4__titulo {
-        justify-self: center;
-    }
-
-    .productoHome4__descripcion {
-        justify-self: center;
-        text-align: center;
+        .productoHome4__descripcion {
+            justify-self: center;
+            text-align: center;
+        }
     }
 }
 
 @media screen and (max-width: 425px) {
-
-    .mainHome article a img,
-    .mainHome__carrusel .carousel-item img {
-        width: 310px;
-        height: 310px;
-    }
-    
     .mainHome {
         grid-template-rows: 0.5fr 400px 0.8fr;
+
+        article {
+            a {
+                img {
+                    width: 310px;
+                    height: 310px;
+                }
+            }
+        }
+
+        .mainHome__carrusel {
+            .carousel-item {
+                img {
+                    width: 310px;
+                    height: 310px;
+                }
+            }
+        }
     }
 }
 

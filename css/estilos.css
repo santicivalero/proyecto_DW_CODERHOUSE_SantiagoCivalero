@@ -341,8 +341,7 @@ header h1:hover {
     padding-top: 20px;
   }
 
-  .productosHomeAbajo__productoHome3,
-.productosHomeAbajo__productoHome4 {
+  .productosHomeAbajo__productoHome3 {
     margin-top: 50px;
     margin-bottom: 100px;
     display: flex;
@@ -351,46 +350,49 @@ header h1:hover {
     justify-content: space-around;
     align-items: center;
   }
-
-  .productosHomeAbajo__productoHome4 {
-    margin-bottom: 120px;
-  }
-
-  .productoHome3__foto {
+  .productosHomeAbajo__productoHome3 .productoHome3__foto {
     padding-right: 0;
   }
-
-  .productoHome3__titulo {
+  .productosHomeAbajo__productoHome3 .productoHome3__titulo {
     justify-self: center;
   }
-
-  .productoHome3__descripcion {
+  .productosHomeAbajo__productoHome3 .productoHome3__descripcion {
     justify-self: center;
     text-align: center;
   }
 
-  .productoHome4__foto {
+  .productosHomeAbajo__productoHome4 {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+  .productosHomeAbajo__productoHome4 .productoHome4__foto {
     padding-left: 0;
   }
-
-  .productoHome4__titulo {
+  .productosHomeAbajo__productoHome4 .productoHome4__titulo {
     justify-self: center;
   }
-
-  .productoHome4__descripcion {
+  .productosHomeAbajo__productoHome4 .productoHome4__descripcion {
     justify-self: center;
     text-align: center;
   }
 }
 @media screen and (max-width: 425px) {
-  .mainHome article a img,
-.mainHome__carrusel .carousel-item img {
+  .mainHome {
+    grid-template-rows: 0.5fr 400px 0.8fr;
+  }
+  .mainHome article a img {
     width: 310px;
     height: 310px;
   }
-
-  .mainHome {
-    grid-template-rows: 0.5fr 400px 0.8fr;
+  .mainHome .mainHome__carrusel .carousel-item img {
+    width: 310px;
+    height: 310px;
   }
 }
 @media screen and (min-width: 1025px) {
