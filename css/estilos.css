@@ -1,5 +1,18 @@
 @charset "UTF-8";
 /* Paleta de colores: https://colorhunt.co/palette/362222b3541effccd2ffeded */
+/* Bucles: --------------------------------------------------------------------------------.----*/
+.fondo-home {
+  background-image: url("../img/fondo_home.svg");
+}
+
+.fondo-info {
+  background-image: url("../img/fondo_info.svg");
+}
+
+.fondo-seccionProductos {
+  background-image: url("../img/fondo_seccionProductos.svg");
+}
+
 /* Reseteo: ------------------------------------------------------------------------------------*/
 * {
   margin: 0;
@@ -172,7 +185,8 @@ header h1:hover {
 }
 
 /* Imports: ----------------------------------------------------------------------------------*/
-/* Home: -------------------------------------------------------------------------------------*/
+/* Mixins: ------------------------------------------------------------------------------------*/
+/* Home: --------------------------------------------------------------------------------------*/
 .home {
   display: grid;
   grid-template-columns: 1fr;
@@ -196,7 +210,6 @@ header h1:hover {
   grid-template-rows: 0.5fr 500px 0.8fr;
   gap: 5px 5px;
   grid-template-areas: "productosHomeArriba" "carrusel" "productosHomeAbajo";
-  background-image: url(../img/fondo_home.svg);
   background-size: cover;
   background-position: center;
 }
@@ -211,7 +224,7 @@ header h1:hover {
   align-items: baseline;
 }
 
-.productosHomeArriba__productoHome1 {
+.productosHomeArriba__productoHome1, .productosHomeArriba__productoHome2 {
   grid-area: productoHome1;
 }
 
@@ -219,8 +232,7 @@ header h1:hover {
   grid-area: productoHome2;
 }
 
-.productosHomeArriba__productoHome1,
-.productosHomeArriba__productoHome2 {
+.productosHomeArriba__productoHome1, .productosHomeArriba__productoHome2 {
   margin-top: 80px;
   margin-bottom: 80px;
   display: flex;
@@ -247,8 +259,8 @@ header h1:hover {
 }
 
 .mainHome__carrusel img {
-  width: 400px;
   height: 400px;
+  width: 400px;
 }
 
 .mainHome .carousel-item,
@@ -342,8 +354,8 @@ header h1:hover {
 }
 
 .mainHome article a img {
-  width: 400px;
   height: 400px;
+  width: 400px;
   opacity: 0.96;
   box-shadow: 0 0 5px #b3541e;
   border-radius: 5px;
@@ -430,7 +442,8 @@ header h1:hover {
     margin-bottom: 120px;
   }
 }
-/* Página -Info-: ----------------------------------------------------------------------------*/
+/* Mixins: ------------------------------------------------------------------------------------*/
+/* Página -Info-: -----------------------------------------------------------------------------*/
 .info {
   display: grid;
   grid-template-columns: 1fr;
@@ -446,7 +459,6 @@ header h1:hover {
   justify-content: space-around;
   padding-top: 50px;
   padding-bottom: 60px;
-  background-image: url(../img/fondo_info.svg);
   background-size: cover;
   background-position: center;
 }
@@ -573,7 +585,6 @@ textarea {
 
 .mainSeccionProductos {
   grid-area: mainSeccionProductos;
-  background-image: url(../img/fondo_seccionProductos.svg);
   background-size: cover;
   background-position: center;
 }
@@ -605,8 +616,8 @@ textarea {
 .fotoProducto,
 .fotoPorcionIndividual,
 .fotoMesaDulce {
-  width: 300px;
   height: 300px;
+  width: 300px;
   opacity: 0.96;
   box-shadow: 0 0 5px #b3541e;
   border-radius: 5px;
@@ -615,8 +626,8 @@ textarea {
 }
 
 .fotoMesaDulce {
-  width: 800px;
   height: 500px;
+  width: 800px;
 }
 
 .fotoProducto:hover,

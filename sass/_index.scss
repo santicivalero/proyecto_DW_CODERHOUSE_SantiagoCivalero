@@ -1,4 +1,11 @@
-/* Home: -------------------------------------------------------------------------------------*/
+/* Mixins: ------------------------------------------------------------------------------------*/
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+/* Home: --------------------------------------------------------------------------------------*/
 
 .home {
     display: grid;
@@ -29,7 +36,7 @@
         "productosHomeArriba"
         "carrusel"
         "productosHomeAbajo";
-    background-image: url(../img/fondo_home.svg);
+    // background-image: url(../img/fondo_home.svg);
     background-size: cover;
     background-position: center;
 }
@@ -53,8 +60,7 @@
     grid-area: productoHome2;
 }
 
-.productosHomeArriba__productoHome1,
-.productosHomeArriba__productoHome2 {
+.productosHomeArriba__productoHome1 {
     margin-top: 80px;
     margin-bottom: 80px;
     display: flex;
@@ -62,6 +68,10 @@
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+}
+
+.productosHomeArriba__productoHome2 {
+    @extend .productosHomeArriba__productoHome1;
 }
 
 .productosHomeArriba__productoHome1 p,
@@ -81,8 +91,7 @@
 }
 
 .mainHome__carrusel img {
-    width: 400px;
-    height: 400px;
+    @include sizes(400px, 400px);
 }
 
 .mainHome .carousel-item,
@@ -182,8 +191,7 @@
 }
 
 .mainHome article a img {
-    width: 400px;
-    height: 400px;
+    @include sizes(400px, 400px);
     opacity: 0.96;
     box-shadow: 0 0 5px $color1;
     border-radius: 5px;

@@ -1,4 +1,11 @@
-/* Página -Info-: ----------------------------------------------------------------------------*/
+/* Mixins: ------------------------------------------------------------------------------------*/
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+/* Página -Info-: -----------------------------------------------------------------------------*/
 
 .info {
     display: grid;
@@ -18,7 +25,7 @@
     justify-content: space-around;
     padding-top: 50px;
     padding-bottom: 60px;
-    background-image: url(../img/fondo_info.svg);
+    // background-image: url(../img/fondo_info.svg);
     background-size: cover;
     background-position: center;
 }
@@ -32,8 +39,7 @@
 }
 
 .mainInfo img {
-    height: 400px;
-    width: 400px;
+    @include sizes(400px, 400px);
 }
 
 .mainInfo p {
@@ -155,7 +161,7 @@ textarea {
 
 .mainSeccionProductos {
     grid-area: mainSeccionProductos;
-    background-image: url(../img/fondo_seccionProductos.svg);
+    // background-image: url(../img/fondo_seccionProductos.svg);
     background-size: cover;
     background-position: center;
 }
@@ -187,8 +193,7 @@ textarea {
 .fotoProducto,
 .fotoPorcionIndividual,
 .fotoMesaDulce {
-    width: 300px;
-    height: 300px;
+    @include sizes(300px, 300px);
     opacity: 0.96;
     box-shadow: 0 0 5px $color1;
     border-radius: 5px;
@@ -197,8 +202,7 @@ textarea {
 }
 
 .fotoMesaDulce {
-    width: 800px;
-    height: 500px;
+    @include sizes(800px, 500px);
 }
 
 .fotoProducto:hover,

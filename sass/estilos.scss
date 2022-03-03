@@ -5,6 +5,14 @@ $color1: rgb(179, 84, 30);
 $color2: rgb(255, 204, 210);
 $color3: rgb(255, 237, 237);
 
+/* Bucles: --------------------------------------------------------------------------------.----*/
+
+@each $pagina in home, info, seccionProductos {
+    .fondo-#{$pagina} {
+      background-image: url('../img/fondo_#{$pagina}.svg');
+    }
+ }
+ 
 /* Reseteo: ------------------------------------------------------------------------------------*/
 
 * {
@@ -38,8 +46,10 @@ header {
             transition: text-shadow 0.3s;
         }
 
-        &:hover:not(a.dropdown-toggle) {
-            text-shadow: 0 0 10px $color1;
+        &:hover {
+            &:not(a.dropdown-toggle) {
+                text-shadow: 0 0 10px $color1;
+            }
         }
     }
 }
