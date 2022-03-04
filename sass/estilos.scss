@@ -1,11 +1,11 @@
-/* Paleta de colores: https://colorhunt.co/palette/362222b3541effccd2ffeded */
+/* Paleta de colores: https://colorhunt.co/palette/362222b3541effccd2ffeded --------------------*/
 
 $color0: rgb(54, 34, 34);
 $color1: rgb(179, 84, 30);
 $color2: rgb(255, 204, 210);
 $color3: rgb(255, 237, 237);
 
-/* Bucles: --------------------------------------------------------------------------------.----*/
+/* Bucles: -------------------------------------------------------------------------------------*/
 
 @each $pagina in home, info, seccionProductos {
     .fondo-#{$pagina} {
@@ -13,91 +13,89 @@ $color3: rgb(255, 237, 237);
     }
  }
  
-/* Reseteo: ------------------------------------------------------------------------------------*/
+/* Reseteo, body y sus partes principales -general: --------------------------------------------*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
 
-/* Body y sus partes principales - general: ----------------------------------------------------*/
- 
-body {
-    font-family: 'Dosis', sans-serif;
-    color: $color0;
-    text-shadow: 0 0 30px $color1;
-    height: 100vh;
-}
+    body {
+        font-family: 'Dosis', sans-serif;
+        color: $color0;
+        text-shadow: 0 0 30px $color1;
+        height: 100vh;
+    }
 
-header {
-    background-color: $color2;
-    background-image: linear-gradient(to left, $color2, $color3);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: baseline;
-    text-align: center;
+    header {
+        background-color: $color2;
+        background-image: linear-gradient(to left, $color2, $color3);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: baseline;
+        text-align: center;
 
-    a {
-        &:not(a.dropdown-toggle) {
-            color: $color0;
-            transition: text-shadow 0.3s;
-        }
-
-        &:hover {
+        a {
             &:not(a.dropdown-toggle) {
-                text-shadow: 0 0 10px $color1;
+                color: $color0;
+                transition: text-shadow 0.3s;
+            }
+
+            &:hover {
+                &:not(a.dropdown-toggle) {
+                    text-shadow: 0 0 10px $color1;
+                }
             }
         }
     }
-}
 
-main {
-    background-color: $color3;
-}
-
-footer {
-    background-color: $color2;
-    background-image: linear-gradient(to left, $color2, $color3);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 5px;
-
-    a {
-
-        &:hover {
-            color: $color0;
-            transition: text-shadow 0.3s;
-            text-shadow: 0 0 10px $color1;
-        }
-
+    main {
+        background-color: $color3;
     }
 
-    section {
-        margin-top: 5px;
-    }
+    footer {
+        background-color: $color2;
+        background-image: linear-gradient(to left, $color2, $color3);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 5px;
 
-    ul {
-        ul {
-            background-color: $color2;
-            border: solid 1px $color3;
-        }
-    }
-}
-
-.redesSociales {
-    div {
-        img {
-            transition: transform 1s;
+        a {
 
             &:hover {
-                transform: rotate(360deg);
+                color: $color0;
+                transition: text-shadow 0.3s;
+                text-shadow: 0 0 10px $color1;
+            }
+
+        }
+
+        section {
+            margin-top: 5px;
+
+            ul {
+                ul {
+                    background-color: $color2;
+                    border: solid 1px $color3;
+                }
+            }
+
+            &.redesSociales {
+                div {
+                    img {
+                        transition: transform 1s;
+            
+                        &:hover {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
             }
         }
     }
@@ -122,43 +120,53 @@ footer {
 
     .headerMobile {
         grid-area: headerHome, headerInfo, headerContacto, headerSeccionProductos;
-    }
 
-    .bg-light {
-        background-color: $color2 !important;
-        background-image: linear-gradient(to left, $color2, $color3);
-    }
+        .bg-light {
+            background-color: $color2 !important;
+            background-image: linear-gradient(to left, $color2, $color3);
+        }
 
-    .offcanvas {
-        background-color: $color3;
-    }
+        .offcanvas {
+            background-color: $color3;
 
-    .dropdown-menu {
-        background-color: $color2;
-    }
+            .dropdown-menu {
+                background-color: $color2;
 
-    .dropdown-item:hover {
-        background-color: $color2;
-    }
+                .dropdown-item {
+                    &:hover {
+                        background-color: $color2;
+                    }
 
-    .dropdown-item.active, .dropdown-item:active {
-        color: $color0;
-        text-decoration: none;
-        background-color: $color2;
+                    &.active {
+                        color: $color0;
+                        text-decoration: none;
+                        background-color: $color2;
+                    }
+
+                    &:active {
+                        color: $color0;
+                        text-decoration: none;
+                        background-color: $color2;
+                    }
+                }
+            }
+        }
     }
 
     a {
         &.nav-link {
             color: $color0 !important;
         }
+
+        strong {
+            cursor: default;
+        }
     }
 
-    a strong {
-        cursor: default;
-    }
-
-    strong.dropdown-item {
-        font-weight: bolder;
+    strong {
+        &.dropdown-item {
+            font-weight: bolder;
+        }
     }
 }
 
@@ -168,7 +176,7 @@ footer {
     }
 }
 
-/* Barra de navegación desktop y logo: ----------------------------------------------------------------*/
+/* Barra de navegación desktop y logo: ---------------------------------------------------------*/
 
 li {
     display: inline-block;
@@ -229,7 +237,7 @@ header {
     }
 }
 
-/* Imports: ----------------------------------------------------------------------------------*/
+/* Imports: ------------------------------------------------------------------------------------*/
 
 @import "index";
 @import "otras_paginas";

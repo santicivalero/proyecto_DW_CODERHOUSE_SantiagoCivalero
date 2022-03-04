@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* Paleta de colores: https://colorhunt.co/palette/362222b3541effccd2ffeded */
-/* Bucles: --------------------------------------------------------------------------------.----*/
+/* Paleta de colores: https://colorhunt.co/palette/362222b3541effccd2ffeded --------------------*/
+/* Bucles: -------------------------------------------------------------------------------------*/
 .fondo-home {
   background-image: url("../img/fondo_home.svg");
 }
@@ -13,22 +13,19 @@
   background-image: url("../img/fondo_seccionProductos.svg");
 }
 
-/* Reseteo: ------------------------------------------------------------------------------------*/
+/* Reseteo, body y sus partes principales -general: --------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Body y sus partes principales - general: ----------------------------------------------------*/
-body {
+* body {
   font-family: "Dosis", sans-serif;
   color: #362222;
   text-shadow: 0 0 30px #b3541e;
   height: 100vh;
 }
-
-header {
+* header {
   background-color: #ffccd2;
   background-image: linear-gradient(to left, #ffccd2, #ffeded);
   display: flex;
@@ -38,19 +35,17 @@ header {
   align-items: baseline;
   text-align: center;
 }
-header a:not(a.dropdown-toggle) {
+* header a:not(a.dropdown-toggle) {
   color: #362222;
   transition: text-shadow 0.3s;
 }
-header a:hover:not(a.dropdown-toggle) {
+* header a:hover:not(a.dropdown-toggle) {
   text-shadow: 0 0 10px #b3541e;
 }
-
-main {
+* main {
   background-color: #ffeded;
 }
-
-footer {
+* footer {
   background-color: #ffccd2;
   background-image: linear-gradient(to left, #ffccd2, #ffeded);
   display: flex;
@@ -61,23 +56,22 @@ footer {
   padding-bottom: 10px;
   padding-top: 5px;
 }
-footer a:hover {
+* footer a:hover {
   color: #362222;
   transition: text-shadow 0.3s;
   text-shadow: 0 0 10px #b3541e;
 }
-footer section {
+* footer section {
   margin-top: 5px;
 }
-footer ul ul {
+* footer section ul ul {
   background-color: #ffccd2;
   border: solid 1px #ffeded;
 }
-
-.redesSociales div img {
+* footer section.redesSociales div img {
   transition: transform 1s;
 }
-.redesSociales div img:hover {
+* footer section.redesSociales div img:hover {
   transform: rotate(360deg);
 }
 
@@ -97,25 +91,25 @@ footer ul ul {
   .headerMobile {
     grid-area: headerHome, headerInfo, headerContacto, headerSeccionProductos;
   }
-
-  .bg-light {
+  .headerMobile .bg-light {
     background-color: #ffccd2 !important;
     background-image: linear-gradient(to left, #ffccd2, #ffeded);
   }
-
-  .offcanvas {
+  .headerMobile .offcanvas {
     background-color: #ffeded;
   }
-
-  .dropdown-menu {
+  .headerMobile .offcanvas .dropdown-menu {
     background-color: #ffccd2;
   }
-
-  .dropdown-item:hover {
+  .headerMobile .offcanvas .dropdown-menu .dropdown-item:hover {
     background-color: #ffccd2;
   }
-
-  .dropdown-item.active, .dropdown-item:active {
+  .headerMobile .offcanvas .dropdown-menu .dropdown-item.active {
+    color: #362222;
+    text-decoration: none;
+    background-color: #ffccd2;
+  }
+  .headerMobile .offcanvas .dropdown-menu .dropdown-item:active {
     color: #362222;
     text-decoration: none;
     background-color: #ffccd2;
@@ -124,7 +118,6 @@ footer ul ul {
   a.nav-link {
     color: #362222 !important;
   }
-
   a strong {
     cursor: default;
   }
@@ -138,7 +131,7 @@ footer ul ul {
     display: none;
   }
 }
-/* Barra de navegación desktop y logo: ----------------------------------------------------------------*/
+/* Barra de navegación desktop y logo: ---------------------------------------------------------*/
 li {
   display: inline-block;
   width: 110px;
@@ -184,7 +177,7 @@ header h1:hover {
   transform: skewX(10deg);
 }
 
-/* Imports: ----------------------------------------------------------------------------------*/
+/* Imports: ------------------------------------------------------------------------------------*/
 /* Mixins: ------------------------------------------------------------------------------------*/
 /* Home: --------------------------------------------------------------------------------------*/
 .home {
