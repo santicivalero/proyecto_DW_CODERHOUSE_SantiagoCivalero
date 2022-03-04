@@ -16,36 +16,36 @@
         "headerInfo"
         "mainInfo"
         "footerInfo";
-}
 
-.mainInfo {
-    grid-area: mainInfo;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-top: 50px;
-    padding-bottom: 60px;
-    // background-image: url(../img/fondo_info.svg);
-    background-size: cover;
-    background-position: center;
-}
+    .headerInfo {
+        grid-area: headerInfo;
+    }
 
-.footerInfo {
-    grid-area: footerInfo;
-}
+    .mainInfo {
+        grid-area: mainInfo;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 50px;
+        padding-bottom: 60px;
+        // background-image: url(../img/fondo_info.svg);
+        background-size: cover;
+        background-position: center;
 
-.headerInfo {
-    grid-area: headerInfo;
-}
+        img {
+            @include sizes(400px, 400px);
+        }
+        
+        p {
+            margin-top: 20px;
+            text-align: center;
+            width: 95%;
+        }
+    }
 
-.mainInfo img {
-    @include sizes(400px, 400px);
-}
-
-.mainInfo p {
-    margin-top: 20px;
-    text-align: center;
-    width: 95%;
+    .footerInfo {
+        grid-area: footerInfo;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -66,79 +66,81 @@
         "headerContacto"
         "mainContacto"
         "footerContacto";
-}
 
-.mainContacto {
-    grid-area: mainContacto;
-    background-image: url(../img/cookies.png);
-    background-position: left;
-    font-weight: bolder;
-    text-shadow: none;
-}
+    .headerContacto {
+        grid-area: headerContacto;
+    }
 
-.footerContacto {
-    grid-area: footerContacto;
-}
+    .mainContacto {
+        grid-area: mainContacto;
+        background-image: url(../img/cookies.png);
+        background-position: left;
+        font-weight: bolder;
+        text-shadow: none;
 
-.headerContacto {
-    grid-area: headerContacto;
-}
+        .formulario {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            border: 2px solid $color2;
+            padding: 50px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        
+            input[type=text],
+            input[type=number],
+            input[type=email],
+            input[type=checkbox],
+            textarea {
+                border: 2px solid $color0;
+                border-radius: 4px;
+            }
+        
+            .formulario__checkbox {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        
+            .button {
+                background-color: $color2;
+                border: none;
+                font-family: 'Dosis', sans-serif;
+                color: $color0;
+                text-shadow: 1px 1px 30px $color1;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 1em;
+                box-shadow: 2px 2px 5px $color1;
+            
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        
+            label {
+                display: block;
+            }
+        }
+    }
 
-.formulario {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    border: 2px solid $color2;
-    padding: 50px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=checkbox],
-textarea {
-    border: 2px solid $color0;
-    border-radius: 4px;
-}
-
-.formulario__checkbox {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-.button {
-    background-color: $color2;
-    border: none;
-    font-family: 'Dosis', sans-serif;
-    color: $color0;
-    text-shadow: 1px 1px 30px $color1;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1em;
-    box-shadow: 2px 2px 5px $color1;
-}
-
-.button:hover {
-    font-weight: bold;
-}
-
-.formulario label {
-    display: block;
+    .footerContacto {
+        grid-area: footerContacto;
+    }
 }
 
 @media screen and (max-width: 395px) {
-    .formulario label {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
+    .formulario {
+        label {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
 
-    .button {
-        padding: 10px 21px;
+        .button {
+            padding: 10px 21px;
+        }
     }
 }
 
@@ -153,21 +155,21 @@ textarea {
         "headerSeccionProductos"
         "mainSeccionProductos"
         "footerSeccionProductos";
-}
 
-.headerSeccionProductos {
-    grid-area: headerSeccionProductos;
-}
+    .headerSeccionProductos {
+        grid-area: headerSeccionProductos;
+    }
 
-.mainSeccionProductos {
-    grid-area: mainSeccionProductos;
-    // background-image: url(../img/fondo_seccionProductos.svg);
-    background-size: cover;
-    background-position: center;
-}
+    .mainSeccionProductos {
+        grid-area: mainSeccionProductos;
+        // background-image: url(../img/fondo_seccionProductos.svg);
+        background-size: cover;
+        background-position: center;
+    }
 
-.footerSeccionProductos {
-    grid-area: footerSeccionProductos;
+    .footerSeccionProductos {
+        grid-area: footerSeccionProductos;
+    }
 }
 
 .mainSeccionProductos h2,
@@ -176,18 +178,24 @@ textarea {
     text-align: center;
 }
 
-.mainSeccionProductos h2 {
-    padding-top: 70px;
-    font-size: 2em;
+.mainSeccionProductos {
+    h2 {
+        padding-top: 70px;
+        font-size: 2em;
+    }
 }
 
-.mainSeccionProductos h4 {
-    font-size: 1.2em;
-    margin: 10px 10px;
+.mainSeccionProductos {
+    h4 {
+        font-size: 1.2em;
+        margin: 10px 10px;
+    }
 }
 
-.mainSeccionProductos>p {
-    margin-bottom: 50px;
+.mainSeccionProductos {
+    >p {
+        margin-bottom: 50px;
+    }
 }
 
 .fotoProducto,
@@ -259,6 +267,19 @@ textarea {
 
 .carousel-indicators [data-bs-target] {
     background-color: $color0;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(https://icongr.am/octicons/chevron-left.svg?size=70&color=362222);
+}
+
+.carousel-control-next-icon {
+    background-image: url(https://icongr.am/octicons/chevron-right.svg?size=70&color=362222);
+}
+
+.mainSeccionProductos .carousel-control-next, 
+.mainSeccionProductos .carousel-control-prev {
+    bottom: 100px;
 }
 
 @media screen and (max-width: 840px) {

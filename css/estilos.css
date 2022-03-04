@@ -187,16 +187,10 @@ header h1:hover {
   gap: 0px 0px;
   grid-template-areas: "headerHome" "mainHome" "footerHome";
 }
-
-.headerHome {
+.home .headerHome {
   grid-area: headerHome;
 }
-
-.footerHome {
-  grid-area: footerHome;
-}
-
-.mainHome {
+.home .mainHome {
   display: grid;
   grid-area: mainHome;
   grid-template-columns: 1fr;
@@ -205,6 +199,9 @@ header h1:hover {
   grid-template-areas: "productosHomeArriba" "carrusel" "productosHomeAbajo";
   background-size: cover;
   background-position: center;
+}
+.home .footerHome {
+  grid-area: footerHome;
 }
 
 .mainHome__productosHomeArriba {
@@ -216,16 +213,7 @@ header h1:hover {
   grid-template-areas: "productoHome1 productoHome2";
   align-items: baseline;
 }
-
-.productosHomeArriba__productoHome1, .productosHomeArriba__productoHome2 {
-  grid-area: productoHome1;
-}
-
-.productosHomeArriba__productoHome2 {
-  grid-area: productoHome2;
-}
-
-.productosHomeArriba__productoHome1, .productosHomeArriba__productoHome2 {
+.mainHome__productosHomeArriba .productosHomeArriba__productoHome1 {
   margin-top: 80px;
   margin-bottom: 80px;
   display: flex;
@@ -233,10 +221,23 @@ header h1:hover {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+  grid-area: productoHome1;
 }
-
-.productosHomeArriba__productoHome1 p,
-.productosHomeArriba__productoHome2 p {
+.mainHome__productosHomeArriba .productosHomeArriba__productoHome1 p {
+  width: 80%;
+  text-align: center;
+}
+.mainHome__productosHomeArriba .productosHomeArriba__productoHome2 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: productoHome2;
+}
+.mainHome__productosHomeArriba .productosHomeArriba__productoHome2 p {
   width: 80%;
   text-align: center;
 }
@@ -250,36 +251,30 @@ header h1:hover {
   background-color: #ffccd2;
   margin-bottom: 100px;
 }
-
 .mainHome__carrusel img {
   height: 400px;
   width: 400px;
 }
-
-.mainHome .carousel-item,
-.mainHome .carousel-item.active {
+.mainHome__carrusel .carousel-item {
   display: flex;
   justify-content: center;
   height: 400px;
 }
-
-.mainHome .carousel-item img {
+.mainHome__carrusel .carousel-item.active {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+.mainHome__carrusel .carousel-item img {
   border-left: solid 2px #b3541e;
   border-right: solid 2px #b3541e;
   height: 400px;
 }
-
-.carousel-control-prev-icon {
+.mainHome__carrusel .carousel-control-prev-icon {
   background-image: url(https://icongr.am/octicons/chevron-left.svg?size=70&color=362222);
 }
-
-.carousel-control-next-icon {
+.mainHome__carrusel .carousel-control-next-icon {
   background-image: url(https://icongr.am/octicons/chevron-right.svg?size=70&color=362222);
-}
-
-.mainSeccionProductos .carousel-control-next,
-.mainSeccionProductos .carousel-control-prev {
-  bottom: 100px;
 }
 
 .mainHome__productosHomeAbajo {
@@ -301,18 +296,15 @@ header h1:hover {
   justify-items: center;
   margin-bottom: 80px;
 }
-
-.productoHome3__foto {
+.productosHomeAbajo__productoHome3 .productoHome3__foto {
   grid-area: productoHome3__foto;
   padding-right: 20px;
 }
-
-.productoHome3__titulo {
+.productosHomeAbajo__productoHome3 .productoHome3__titulo {
   grid-area: productoHome3__titulo;
   justify-self: start;
 }
-
-.productoHome3__descripcion {
+.productosHomeAbajo__productoHome3 .productoHome3__descripcion {
   grid-area: productoHome3__descripcion;
   width: 80%;
   justify-self: start;
@@ -328,18 +320,15 @@ header h1:hover {
   grid-area: productoHome4;
   justify-items: center;
 }
-
-.productoHome4__foto {
+.productosHomeAbajo__productoHome4 .productoHome4__foto {
   grid-area: productoHome4__foto;
   padding-left: 20px;
 }
-
-.productoHome4__titulo {
+.productosHomeAbajo__productoHome4 .productoHome4__titulo {
   grid-area: productoHome4__titulo;
   justify-self: end;
 }
-
-.productoHome4__descripcion {
+.productosHomeAbajo__productoHome4 .productoHome4__descripcion {
   grid-area: productoHome4__descripcion;
   width: 80%;
   justify-self: end;
@@ -352,22 +341,14 @@ header h1:hover {
   opacity: 0.96;
   box-shadow: 0 0 5px #b3541e;
   border-radius: 5px;
-}
-
-.mainHome article a img:hover {
-  opacity: 1;
-}
-
-.mainHome article h3 {
-  font-size: 2em;
-}
-
-.mainHome article a img {
   transition: transform 0.3s;
 }
-
 .mainHome article a img:hover {
+  opacity: 1;
   transform: scale(1.01);
+}
+.mainHome article h3 {
+  font-size: 2em;
 }
 
 @media screen and (max-width: 1024px) {
@@ -444,8 +425,10 @@ header h1:hover {
   gap: 0px 0px;
   grid-template-areas: "headerInfo" "mainInfo" "footerInfo";
 }
-
-.mainInfo {
+.info .headerInfo {
+  grid-area: headerInfo;
+}
+.info .mainInfo {
   grid-area: mainInfo;
   display: flex;
   flex-wrap: wrap;
@@ -455,24 +438,17 @@ header h1:hover {
   background-size: cover;
   background-position: center;
 }
-
-.footerInfo {
-  grid-area: footerInfo;
-}
-
-.headerInfo {
-  grid-area: headerInfo;
-}
-
-.mainInfo img {
+.info .mainInfo img {
   height: 400px;
   width: 400px;
 }
-
-.mainInfo p {
+.info .mainInfo p {
   margin-top: 20px;
   text-align: center;
   width: 95%;
+}
+.info .footerInfo {
+  grid-area: footerInfo;
 }
 
 @media screen and (max-width: 425px) {
@@ -489,24 +465,17 @@ header h1:hover {
   gap: 0px 0px;
   grid-template-areas: "headerContacto" "mainContacto" "footerContacto";
 }
-
-.mainContacto {
+.contacto .headerContacto {
+  grid-area: headerContacto;
+}
+.contacto .mainContacto {
   grid-area: mainContacto;
   background-image: url(../img/cookies.png);
   background-position: left;
   font-weight: bolder;
   text-shadow: none;
 }
-
-.footerContacto {
-  grid-area: footerContacto;
-}
-
-.headerContacto {
-  grid-area: headerContacto;
-}
-
-.formulario {
+.contacto .mainContacto .formulario {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -515,23 +484,20 @@ header h1:hover {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=checkbox],
-textarea {
+.contacto .mainContacto .formulario input[type=text],
+.contacto .mainContacto .formulario input[type=number],
+.contacto .mainContacto .formulario input[type=email],
+.contacto .mainContacto .formulario input[type=checkbox],
+.contacto .mainContacto .formulario textarea {
   border: 2px solid #362222;
   border-radius: 4px;
 }
-
-.formulario__checkbox {
+.contacto .mainContacto .formulario .formulario__checkbox {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 }
-
-.button {
+.contacto .mainContacto .formulario .button {
   background-color: #ffccd2;
   border: none;
   font-family: "Dosis", sans-serif;
@@ -543,13 +509,14 @@ textarea {
   font-size: 1em;
   box-shadow: 2px 2px 5px #b3541e;
 }
-
-.button:hover {
+.contacto .mainContacto .formulario .button:hover {
   font-weight: bold;
 }
-
-.formulario label {
+.contacto .mainContacto .formulario label {
   display: block;
+}
+.contacto .footerContacto {
+  grid-area: footerContacto;
 }
 
 @media screen and (max-width: 395px) {
@@ -558,8 +525,7 @@ textarea {
     flex-direction: column;
     flex-wrap: wrap;
   }
-
-  .button {
+  .formulario .button {
     padding: 10px 21px;
   }
 }
@@ -571,18 +537,15 @@ textarea {
   gap: 0px 0px;
   grid-template-areas: "headerSeccionProductos" "mainSeccionProductos" "footerSeccionProductos";
 }
-
-.headerSeccionProductos {
+.seccionProductos .headerSeccionProductos {
   grid-area: headerSeccionProductos;
 }
-
-.mainSeccionProductos {
+.seccionProductos .mainSeccionProductos {
   grid-area: mainSeccionProductos;
   background-size: cover;
   background-position: center;
 }
-
-.footerSeccionProductos {
+.seccionProductos .footerSeccionProductos {
   grid-area: footerSeccionProductos;
 }
 
@@ -677,6 +640,19 @@ textarea {
 
 .carousel-indicators [data-bs-target] {
   background-color: #362222;
+}
+
+.carousel-control-prev-icon {
+  background-image: url(https://icongr.am/octicons/chevron-left.svg?size=70&color=362222);
+}
+
+.carousel-control-next-icon {
+  background-image: url(https://icongr.am/octicons/chevron-right.svg?size=70&color=362222);
+}
+
+.mainSeccionProductos .carousel-control-next,
+.mainSeccionProductos .carousel-control-prev {
+  bottom: 100px;
 }
 
 @media screen and (max-width: 840px) {
