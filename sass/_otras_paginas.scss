@@ -41,6 +41,21 @@
             text-align: center;
             width: 95%;
         }
+
+        .accordion-item {
+            background: transparent;
+
+            .accordion-button {
+                background: transparent;
+                color: $color0;
+
+                &:focus {
+                    border-color: none;
+                    box-shadow: 0 0 0 .25rem $color2;
+                    color: $color0;
+                }
+            }
+        }
     }
 
     .footerInfo {
@@ -182,27 +197,29 @@
     h2 {
         padding-top: 70px;
         font-size: 2em;
+        font-weight: bold;
     }
-}
 
-.mainSeccionProductos {
     h4 {
         font-size: 1.2em;
         margin: 10px 10px;
+        font-weight: bold;
+    }
+
+    p {
+        margin-bottom: 50px;
+        font-size: 1.1em;
     }
 }
 
-.mainSeccionProductos {
-    >p {
-        margin-bottom: 50px;
-    }
+.mesasDulces {
+    padding-bottom: 20px;
 }
 
 .fotoProducto,
-.fotoPorcionIndividual,
 .fotoMesaDulce {
     @include sizes(300px, 300px);
-    opacity: 0.96;
+    opacity: 0.99;
     box-shadow: 0 0 5px $color1;
     border-radius: 5px;
     display: block;
@@ -214,7 +231,6 @@
 }
 
 .fotoProducto:hover,
-.fotoPorcionIndividual:hover,
 .fotoMesaDulce:hover {
     opacity: 1.0;
 }
@@ -241,18 +257,6 @@
 .catalogoMesasDulces,
 .catalogoTortasPersonalizadas {
     padding-bottom: 100px;
-}
-
-.catalogoPostres article .fotoPorcionIndividual {
-    display: none;
-}
-
-.catalogoPostres article:hover .fotoPorcionIndividual {
-    display: block;
-}
-
-.catalogoPostres article:hover .fotoProducto {
-    display: none;
 }
 
 .catalogoMesasDulces .carousel-item.active {

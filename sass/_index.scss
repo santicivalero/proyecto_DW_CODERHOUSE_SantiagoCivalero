@@ -112,6 +112,7 @@
             border-left: solid 2px $color1;
             border-right: solid 2px $color1;
             height: 400px;
+            object-fit: cover;
         }
     }
 
@@ -199,9 +200,10 @@
         a {
             img {
                 @include sizes(400px, 400px);
-                opacity: 0.96;
+                opacity: 0.99;
                 box-shadow: 0 0 5px $color1;
                 border-radius: 5px;
+                object-fit: cover;
                 transition: transform 0.3s;
 
                 &:hover {

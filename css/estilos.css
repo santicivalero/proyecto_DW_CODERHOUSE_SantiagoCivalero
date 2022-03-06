@@ -269,6 +269,7 @@ header h1:hover {
   border-left: solid 2px #b3541e;
   border-right: solid 2px #b3541e;
   height: 400px;
+  object-fit: cover;
 }
 .mainHome__carrusel .carousel-control-prev-icon {
   background-image: url(https://icongr.am/octicons/chevron-left.svg?size=70&color=362222);
@@ -338,9 +339,10 @@ header h1:hover {
 .mainHome article a img {
   height: 400px;
   width: 400px;
-  opacity: 0.96;
+  opacity: 0.99;
   box-shadow: 0 0 5px #b3541e;
   border-radius: 5px;
+  object-fit: cover;
   transition: transform 0.3s;
 }
 .mainHome article a img:hover {
@@ -446,6 +448,18 @@ header h1:hover {
   margin-top: 20px;
   text-align: center;
   width: 95%;
+}
+.info .mainInfo .accordion-item {
+  background: transparent;
+}
+.info .mainInfo .accordion-item .accordion-button {
+  background: transparent;
+  color: #362222;
+}
+.info .mainInfo .accordion-item .accordion-button:focus {
+  border-color: none;
+  box-shadow: 0 0 0 0.25rem #ffccd2;
+  color: #362222;
 }
 .info .footerInfo {
   grid-area: footerInfo;
@@ -558,23 +572,27 @@ header h1:hover {
 .mainSeccionProductos h2 {
   padding-top: 70px;
   font-size: 2em;
+  font-weight: bold;
 }
-
 .mainSeccionProductos h4 {
   font-size: 1.2em;
   margin: 10px 10px;
+  font-weight: bold;
+}
+.mainSeccionProductos p {
+  margin-bottom: 50px;
+  font-size: 1.1em;
 }
 
-.mainSeccionProductos > p {
-  margin-bottom: 50px;
+.mesasDulces {
+  padding-bottom: 20px;
 }
 
 .fotoProducto,
-.fotoPorcionIndividual,
 .fotoMesaDulce {
   height: 300px;
   width: 300px;
-  opacity: 0.96;
+  opacity: 0.99;
   box-shadow: 0 0 5px #b3541e;
   border-radius: 5px;
   display: block;
@@ -587,7 +605,6 @@ header h1:hover {
 }
 
 .fotoProducto:hover,
-.fotoPorcionIndividual:hover,
 .fotoMesaDulce:hover {
   opacity: 1;
 }
@@ -614,18 +631,6 @@ header h1:hover {
 .catalogoMesasDulces,
 .catalogoTortasPersonalizadas {
   padding-bottom: 100px;
-}
-
-.catalogoPostres article .fotoPorcionIndividual {
-  display: none;
-}
-
-.catalogoPostres article:hover .fotoPorcionIndividual {
-  display: block;
-}
-
-.catalogoPostres article:hover .fotoProducto {
-  display: none;
 }
 
 .catalogoMesasDulces .carousel-item.active {
