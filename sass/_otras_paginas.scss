@@ -37,21 +37,43 @@
         }
         
         p {
-            margin-top: 20px;
-            text-align: center;
-            width: 95%;
+            text-align: left;
         }
 
         .accordion-item {
             background: transparent;
 
+            a {
+                color: $color0;
+                transition: transform 0.3s;
+                
+                span {
+                    text-decoration: underline;
+                }
+
+                &:hover {
+                    transform: translateY(3in);
+                }
+            }
+
+            li {
+                display: block;
+                white-space: nowrap;
+            }
+
             .accordion-button {
                 background: transparent;
                 color: $color0;
+                text-shadow: 0 0 30px $color1;
+                transition: text-shadow 0.3s;
+
+                &:hover {
+                    text-shadow: 0 0 10px $color1;
+                }
 
                 &:focus {
                     border-color: none;
-                    box-shadow: 0 0 0 .25rem $color2;
+                    box-shadow: none;
                     color: $color0;
                 }
             }

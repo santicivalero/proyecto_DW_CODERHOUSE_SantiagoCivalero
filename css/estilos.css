@@ -445,20 +445,37 @@ header h1:hover {
   width: 400px;
 }
 .info .mainInfo p {
-  margin-top: 20px;
-  text-align: center;
-  width: 95%;
+  text-align: left;
 }
 .info .mainInfo .accordion-item {
   background: transparent;
 }
+.info .mainInfo .accordion-item a {
+  color: #362222;
+  transition: transform 0.3s;
+}
+.info .mainInfo .accordion-item a span {
+  text-decoration: underline;
+}
+.info .mainInfo .accordion-item a:hover {
+  transform: translateY(3in);
+}
+.info .mainInfo .accordion-item li {
+  display: block;
+  white-space: nowrap;
+}
 .info .mainInfo .accordion-item .accordion-button {
   background: transparent;
   color: #362222;
+  text-shadow: 0 0 30px #b3541e;
+  transition: text-shadow 0.3s;
+}
+.info .mainInfo .accordion-item .accordion-button:hover {
+  text-shadow: 0 0 10px #b3541e;
 }
 .info .mainInfo .accordion-item .accordion-button:focus {
   border-color: none;
-  box-shadow: 0 0 0 0.25rem #ffccd2;
+  box-shadow: none;
   color: #362222;
 }
 .info .footerInfo {
