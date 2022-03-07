@@ -1,0 +1,27 @@
+--General--
+-Autor: Santiago Civalero.
+-Título: barra vertical "|" que separa el nombre de la página y "Julia Ingaramo".
+-Descripción: se menciona "emprendimiento de repostería artesanal de Julia Ingaramo".
+-Palabras clave comunes: reposteria, general pico, tortas, julia ingaramo, la pampa.
+
+--Home--
+-Título: "Julia Ingaramo" aparece antes que el nombre de la página.
+-Descripción: se menciona a grandes rasgos los tipos de productos vendidos.
+-Palabras clave propias: postres, eventos, cumpleaños, quince, casamiento, boda, repostera, pastelera.
+
+--Contacto--
+-Descripción: se alude al formulario de contacto.
+-Palabras clave propias: formulario, contactar, telefono.
+
+--Info--
+-Descripción: se indican los tres pasos básicos para hacer un pedido.
+-Palabras clave propias: informacion, pago, envio, encargar, whatsapp, instagram.
+
+--Mesas dulces y tortas personalizadas--
+-Descripción: se mencionan los dos tipos de productos y la galería de ellos.
+-Palabras clave propias: tortas personalizadas, mesas dulces, eventos, cumpleaños, casamiento, galeria, diseño.
+
+--Postres y saladitos--
+-Descripción: se mencionan los dos tipos de productos y la galería de ellos.
+-Palabras clave propias: postres, rogel, lemon pie, chocolate, saladitos, empanadas, medialunas, galeria, brownies.
+

@@ -223,6 +223,9 @@ header h1:hover {
   align-items: center;
   grid-area: productoHome1;
 }
+.mainHome__productosHomeArriba .productosHomeArriba__productoHome1 h3 {
+  padding-top: 12px;
+}
 .mainHome__productosHomeArriba .productosHomeArriba__productoHome1 p {
   width: 80%;
   text-align: center;
@@ -236,6 +239,9 @@ header h1:hover {
   justify-content: space-around;
   align-items: center;
   grid-area: productoHome2;
+}
+.mainHome__productosHomeArriba .productosHomeArriba__productoHome2 h3 {
+  padding-top: 12px;
 }
 .mainHome__productosHomeArriba .productosHomeArriba__productoHome2 p {
   width: 80%;
@@ -351,6 +357,7 @@ header h1:hover {
 }
 .mainHome article h3 {
   font-size: 2em;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 1024px) {
