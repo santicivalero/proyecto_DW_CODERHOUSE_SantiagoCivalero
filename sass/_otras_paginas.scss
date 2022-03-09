@@ -58,7 +58,7 @@
 
             li {
                 display: block;
-                white-space: nowrap;
+                width: 100%;
             }
 
             .accordion-button {
@@ -77,6 +77,22 @@
                     color: $color0;
                 }
             }
+
+            // .accordion-collapse{
+            //     text-align: center;
+            // }
+            // .accordion-collapse {
+            //     display: flex;
+            //     justify-content: center;
+
+            //     &:first-child {
+
+            //         ul {
+            //             display: flex;
+            //             justify-content: center;
+            //         }
+            //     }
+            // }
         }
     }
 
@@ -85,10 +101,9 @@
     }
 }
 
-@media screen and (max-width: 425px) {
-    .mainInfo div {
-        width: 310px;
-        height: 310px;
+@media screen and (min-width: 768px) {
+    .accordion-collapse{
+        text-align: center;
     }
 }
 

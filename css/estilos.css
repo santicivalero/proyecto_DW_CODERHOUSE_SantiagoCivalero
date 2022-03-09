@@ -305,7 +305,6 @@ header h1:hover {
 }
 .productosHomeAbajo__productoHome3 .productoHome3__foto {
   grid-area: productoHome3__foto;
-  padding-right: 20px;
 }
 .productosHomeAbajo__productoHome3 .productoHome3__titulo {
   grid-area: productoHome3__titulo;
@@ -329,7 +328,6 @@ header h1:hover {
 }
 .productosHomeAbajo__productoHome4 .productoHome4__foto {
   grid-area: productoHome4__foto;
-  padding-left: 20px;
 }
 .productosHomeAbajo__productoHome4 .productoHome4__titulo {
   grid-area: productoHome4__titulo;
@@ -391,7 +389,7 @@ header h1:hover {
     justify-self: center;
   }
 
-  .productoHome3__descripcion {
+  .productosHomeAbajo__productoHome3 .productoHome3__descripcion {
     justify-self: center;
     text-align: center;
   }
@@ -404,7 +402,7 @@ header h1:hover {
     justify-self: center;
   }
 
-  .productoHome4__descripcion {
+  .productosHomeAbajo__productoHome4 .productoHome4__descripcion {
     justify-self: center;
     text-align: center;
   }
@@ -418,6 +416,9 @@ header h1:hover {
 
   .mainHome {
     grid-template-rows: 0.5fr 400px 0.8fr;
+  }
+  .mainHome .mainHome__carrusel {
+    height: 310px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -469,7 +470,7 @@ header h1:hover {
 }
 .info .mainInfo .accordion-item li {
   display: block;
-  white-space: nowrap;
+  width: 100%;
 }
 .info .mainInfo .accordion-item .accordion-button {
   background: transparent;
@@ -489,10 +490,9 @@ header h1:hover {
   grid-area: footerInfo;
 }
 
-@media screen and (max-width: 425px) {
-  .mainInfo div {
-    width: 310px;
-    height: 310px;
+@media screen and (min-width: 768px) {
+  .accordion-collapse {
+    text-align: center;
   }
 }
 /* Página -Contacto-: ------------------------------------------------------------------------*/
